@@ -1,0 +1,224 @@
+#include<stdio.h>
+#include<conio.h>
+#include<process.h>
+#include<graphics.h>
+#include<dos.h>
+
+
+main()
+{
+  int gdriver=DETECT,gmode;
+  int r,x,y,z,v,p,d,j,l,radio,color;
+  initgraph(&gdriver,&gmode,"c:/tc/bgi");
+  cleardevice();
+  radio=0;
+  while (radio<220)
+    {
+      setcolor(9);
+      ellipse(320,200,0,360,radio,180);
+      radio=radio+18;
+      delay(300);
+    }
+  x=0;
+  while(x<50)
+    {
+      setcolor(x);
+      settextstyle(10,0,12);
+      outtextxy(60,50,"UNAM");
+      x=x+1;
+      delay(100);
+    }
+  setcolor(0);
+  settextstyle(10,0,12);
+  outtextxy(60,50,"UNAM");
+  delay(100);
+  radio=0;
+  do
+    {  
+      setcolor(0);
+      ellipse(320,200,0,360,radio,180);
+      radio=radio+18;
+      delay(300);
+    }
+  while(radio<220);
+  x=0;
+  while(x<640);
+    {
+      setcolor(9);
+      line(x,1,x,450);
+      x=x+30;
+      delay(45);
+    }
+  while(y<460)
+    {
+      y=0;
+      setcolor(9);
+      line(1,y,630,y);
+      y=y+30;
+      delay(45);
+    }
+  x=0;
+  while(x<50)
+    {
+      setcolor(x);
+      settextstyle(7,0,12);
+      outtextxy(180,120,"C");
+      delay(100);
+      outtextxy(270,120,"C");
+      delay(100);
+      outtextxy(350,150,"H");
+      x=x+1;
+      delay(100); 
+    }
+  cleardevice();
+  delay(30);
+  setcolor(0); 
+  for(x=0;x<680;x++) 
+    {
+      line(x,0,x,480);
+      delay(15);
+      z=0;
+      do
+	{
+	  setcolor(9);
+	  line(z,1,z,450);
+	  z=z+15;
+	  delay(45);
+	}
+      while(z<640);
+      v=0;
+      while(z<460) 
+	{
+	  setcolor(9);  
+	  line(1,v,630,v);
+	  v=v+15;
+	  delay(25);
+	}
+
+      //r=0;
+    }
+  do
+  {
+    setcolor(14);
+    line(290,y,350,y);
+    y=y+1;
+    delay(25);
+  }
+  while(y<330);
+  y=180;
+  do
+  {
+    setcolor(14);
+    line(y,95,y,140);
+    y=y+1;
+    delay(25);
+  }
+
+
+  while(y<445);
+  x=0;
+  do
+  {
+    setcolor(x);
+    settextstyle(1,0,5);
+    outtextxy(190,360,"VALLEJO");
+    x=x+1;
+    delay(25);
+  }
+  while(x<300);
+  j=0;
+  do
+  {
+    setcolor(0);
+    line(j,0,j,480);
+    j=j+1;
+    delay(10);
+  }
+  while(j<650);
+  getch();
+  cleardevice();
+  while(l<641);
+  do
+  {
+    setcolor(x);
+    settextstyle(5,0,5);
+    outtextxy(113,10,"HECTOR ULISES GONZALEZ MEDEL");
+    settextstyle(5,0,5);
+    outtextxy(113,60,"HECTOR ULISESE GONZALEZ MEDEL");
+    settextstyle(5,0,5);
+    outtextxy(113,120,"HECTOR ULISES GONZALEZ MEDEL");
+    settextstyle(8,0,7);
+    outtextxy(149,180,"PRESENTA:");
+    x=x+1;
+    delay(10);
+  }
+  while(x<280);
+  x=0;
+  do
+  {
+    setcolor(1);
+    settextstyle(3,0,7);
+    outtextxy(90,250,"EXTRAORDINARIO");
+    x=x+1;
+    delay(10);
+  }
+  while(x<250)
+  {
+    getch();
+    closegraph();
+  }
+  for(x=1;x<25;x++)
+  {
+    p=15;
+    do
+    {
+      setcolor(p);
+      circle(p,15,15);
+      p=p+31;
+      cleardevice();
+    }
+    while(p<625);
+    p=45;
+    do
+    {
+      setcolor(p);
+      circle(620,p,15);
+      p=p+30;
+      delay(20);
+      cleardevice();
+    }
+    while(p<445);
+    p=600;
+    do
+    {
+      setcolor(p);
+      circle(p,450,15);
+      p=p-30;
+      delay(10);
+      cleardevice();
+    }
+    while(p>0);
+    p=420;
+    do
+    {
+      setcolor(p);
+      circle(15,p,15);
+      p=p-30;
+      delay(25);
+      cleardevice();
+    }
+    while(p>15);
+    }
+    color=0;
+    do
+    {
+      color=color+1;
+      delay(49);
+    }
+    while(color<300);
+    x=0;
+    closegraph();
+    return(0);
+}
+
+    
